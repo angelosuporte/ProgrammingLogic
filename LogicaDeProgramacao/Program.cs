@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 
 namespace LogicaDeProgramacao
 {
@@ -6,19 +7,29 @@ namespace LogicaDeProgramacao
     {
         static void Main(string[] args)
         {
-            //Operadores aritmeticos em C, C++, Java e C# são: + - * / %(o operador % na linguagem de programação não e porcentagem é resto da divisão chamado mod)
 
-            //Dicas do VS: Identação automática CTRL + k + d, Rodar projeto CTRL +F5, Fonte CTRL + Mouse Scroll
+            Console.WriteLine("Alô mundo");
+            Console.Write("Ei aluno,  ");
 
-            // Declaração de variáveis:  <tipo> <nome> = <valor inicial>;
-            //Uma variável possui Nome, tipo, valor e Endereço
-            //No nome de uma variável não pode ter acentos, espaço e nem ser iniciada com número no inicio, o ideal é adotar o CamelCase
-            //Exemplos:
-            int idade = 31;
-            double altura = 1.68;
-            char sexo = 'F';
+            // Variáveis
+            //Entrada de dados 
+            string Nome = "estou aprendendo com voçê!";
+            int idade = 17;
+            double altura = 1.685;
 
-            //As três operações básicas em programação são: Entrada de dados(leitura), processamento e saida(escrita)
+            //Saída de dados
+            Console.WriteLine(Nome);
+            Console.WriteLine(idade);
+            Console.WriteLine(altura.ToString("F2", CultureInfo.InvariantCulture));
+
+            //Concatatenação
+
+            Console.WriteLine("Não sei meu nome ainda, mas " + Nome + "Tenho "  + idade + "minutos de idade. " 
+                + "Sou seu primeiro programa, mas se fosse uma pessoa, gostaria de crescer "
+                + altura.ToString("F2", CultureInfo.InvariantCulture) + " de altura");
+
+            Console.ReadKey();
+            
 
         }
     }
