@@ -7,30 +7,31 @@ namespace LogicaDeProgramacao
     {
         static void Main(string[] args)
         {
-            // pratice
+            // Some mathematical functions in C# Math.Sqrt, Math.Pow, Math.Abs
+            double x = 3.0;
+            double y = 4.0;
+            double z = -5.0;
+            double A,B,C;
 
-            Console.Write("What is your composite name: ");
-            string name = Console.ReadLine();
-            Console.Write("How many rooms do you have in your house: ");
-            int room = int.Parse(Console.ReadLine());
-            Console.Write("Enter a price for a product: ");
-            double price = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            A = Math.Sqrt(x);
+            B = Math.Sqrt(y);
+            C = Math.Sqrt(25.0);
+            Console.WriteLine("Square root of " + x + " = " + A);
+            Console.WriteLine("Square root of " + y + " = " + B);
+            Console.WriteLine("Square root of 25 = " + C);
 
-            Console.WriteLine("Enter with last name, age e height:");
-            string[] vet = Console.ReadLine().ToString().Split(" ");
-            string lastName = vet[0];
-            int Age = int.Parse(vet[1]);
-            double height = double.Parse(vet[2], CultureInfo.InvariantCulture);
+            A = Math.Pow(x, y);
+            B = Math.Pow(x, 2.0);
+            C = Math.Pow(5.0, 2.0);
+            Console.WriteLine(x  + " Raised to a " + y + " = " + A);
+            Console.WriteLine(x + " Raised squared = " + B);
+            Console.WriteLine("5 raised squared = " + C);
 
-            Console.WriteLine(name);
-            Console.WriteLine(room);
-            Console.Write("$");
-            Console.WriteLine(price.ToString("F2", CultureInfo.InvariantCulture));
-            Console.WriteLine(lastName);
-            Console.WriteLine(Age);
-            Console.WriteLine(height.ToString("F2", CultureInfo.InvariantCulture));
-
-
+            A = Math.Abs(y);
+            B = Math.Abs(z);
+            Console.WriteLine("Absolute value of " + y + " = " + A);
+            Console.WriteLine("Absolute value of " + z + " = " + B);
+            
 
             Console.ReadKey();
             
