@@ -7,27 +7,27 @@ namespace LogicaDeProgramacao
     {
         static void Main(string[] args)
         {
-            // praticte: read one whole number, one letter, one double number. With Split read one name, sex, age and height with the right types
+            // pratice
 
-            Console.WriteLine("Hello, you can start:");
+            Console.Write("What is your composite name: ");
+            string name = Console.ReadLine();
+            Console.Write("How many rooms do you have in your house: ");
+            int room = int.Parse(Console.ReadLine());
+            Console.Write("Enter a price for a product: ");
+            double price = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 
+            Console.WriteLine("Enter with last name, age e height:");
+            string[] vet = Console.ReadLine().ToString().Split(" ");
+            string lastName = vet[0];
+            int Age = int.Parse(vet[1]);
+            double height = double.Parse(vet[2], CultureInfo.InvariantCulture);
 
-            int a = int.Parse(Console.ReadLine());
-            char b = char.Parse(Console.ReadLine());
-            double c1 = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-
-            string[] vet = Console.ReadLine().Split(" ");
-            string name = vet[0];
-            char sex = char.Parse(vet[1]);
-            int age = int.Parse(vet[2]);
-            double height = double.Parse(vet[3], CultureInfo.InvariantCulture);
-
-            Console.WriteLine(a);
-            Console.WriteLine(b);
-            Console.WriteLine(c1.ToString("F2", CultureInfo.InvariantCulture));
             Console.WriteLine(name);
-            Console.WriteLine(sex);
-            Console.WriteLine(age);
+            Console.WriteLine(room);
+            Console.Write("$");
+            Console.WriteLine(price.ToString("F2", CultureInfo.InvariantCulture));
+            Console.WriteLine(lastName);
+            Console.WriteLine(Age);
             Console.WriteLine(height.ToString("F2", CultureInfo.InvariantCulture));
 
 
