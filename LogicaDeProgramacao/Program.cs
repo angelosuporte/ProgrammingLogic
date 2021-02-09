@@ -7,31 +7,19 @@ namespace LogicaDeProgramacao
     {
         static void Main(string[] args)
         {
-            // Some mathematical functions in C# Math.Sqrt, Math.Pow, Math.Abs
-            double x = 3.0;
-            double y = 4.0;
-            double z = -5.0;
-            double A,B,C;
+            // Exercise: Calculating measures and values
+            double width, length, squareMeterPrice, area, price;
 
-            A = Math.Sqrt(x);
-            B = Math.Sqrt(y);
-            C = Math.Sqrt(25.0);
-            Console.WriteLine("Square root of " + x + " = " + A);
-            Console.WriteLine("Square root of " + y + " = " + B);
-            Console.WriteLine("Square root of 25 = " + C);
+            width = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            length = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            squareMeterPrice = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 
-            A = Math.Pow(x, y);
-            B = Math.Pow(x, 2.0);
-            C = Math.Pow(5.0, 2.0);
-            Console.WriteLine(x  + " Raised to a " + y + " = " + A);
-            Console.WriteLine(x + " Raised squared = " + B);
-            Console.WriteLine("5 raised squared = " + C);
+            area = width * length;
+            price = area * squareMeterPrice;
 
-            A = Math.Abs(y);
-            B = Math.Abs(z);
-            Console.WriteLine("Absolute value of " + y + " = " + A);
-            Console.WriteLine("Absolute value of " + z + " = " + B);
-            
+            Console.WriteLine("Area = " + area.ToString("F2", CultureInfo.InvariantCulture));
+            Console.WriteLine("Price = " + price.ToString("F2", CultureInfo.InvariantCulture));
+
 
             Console.ReadKey();
             
