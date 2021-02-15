@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 
 namespace LogicaDeProgramacao
 {
@@ -7,12 +8,12 @@ namespace LogicaDeProgramacao
         static void Main(string[] args)
         {
 
-            int A = int.Parse(Console.ReadLine());
-            int B = int.Parse(Console.ReadLine());
+            double pi = 3.14159;
+            double n = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 
-            int X = A + B;
+            double area = pi * (n * n);
 
-            Console.WriteLine("X = " + X);          
+            Console.WriteLine("A="+area.ToString("F4", CultureInfo.InvariantCulture));
 
         }
     }
