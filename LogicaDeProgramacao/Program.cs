@@ -7,13 +7,14 @@ namespace LogicaDeProgramacao
         static void Main(string[] args)
         {
 
-            int A = int.Parse(Console.ReadLine());
-            int B = int.Parse(Console.ReadLine());
+            int n1 = int.Parse(Console.ReadLine());
+            int n2 = int.Parse(Console.ReadLine());
 
-            int SOMA = A + B;
+            int PROD = n1 * n2;
 
-            Console.WriteLine("SOMA = " + SOMA);
-            
+            Console.WriteLine("PROD = " + PROD);
+           
         }
     }
 }
+
