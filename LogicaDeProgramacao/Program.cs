@@ -7,15 +7,13 @@ namespace LogicaDeProgramacao
     {
         static void Main(string[] args)
         {
-            int numEmp = int.Parse(Console.ReadLine());
-            int workedHours = int.Parse(Console.ReadLine());
-            double hourValue = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            string name = Console.ReadLine();
+            double salary = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            double sales = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 
-            double salary = workedHours * hourValue;
+            double total = salary + (sales * 0.15);
 
-            Console.WriteLine("NUMBER = " + numEmp);
-            Console.WriteLine("SALARY = U$ " + salary.ToString("F2", CultureInfo.InvariantCulture));
-
+            Console.WriteLine("TOTAL = R$ " + total.ToString("F2", CultureInfo.InvariantCulture));
         }
     }
 }
