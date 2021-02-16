@@ -7,21 +7,16 @@ namespace LogicaDeProgramacao
     {
         static void Main(string[] args)
         {
-            //Media ponderada = peque as notas * cada peso, e some os dois produtos, depois pegue a soma dos produtos divide pela soma dos pesos
-            double A = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-            double B = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-            double C = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            int A = int.Parse(Console.ReadLine());
+            int B = int.Parse(Console.ReadLine());
+            int C = int.Parse(Console.ReadLine());
+            int D = int.Parse(Console.ReadLine());
 
-            double pesoA = 2;
-            double pesoB = 3;
-            double pesoC = 5;
+            int DIFERENCA = (A * B - C * D);
 
-            double somaNotas = (A * pesoA) + (B * pesoB) + (C * pesoC);
-            double media = somaNotas / (pesoA + pesoB + pesoC);
-
-            Console.WriteLine("MEDIA = " + media.ToString("F1", CultureInfo.InvariantCulture));
-
+            Console.WriteLine("DIFERENCA = " + DIFERENCA);
             Console.ReadLine();
+
         }
     }
 }
