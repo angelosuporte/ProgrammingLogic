@@ -7,13 +7,22 @@ namespace LogicaDeProgramacao
     {
         static void Main(string[] args)
         {
-            string name = Console.ReadLine();
-            double salary = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-            double sales = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 
-            double total = salary + (sales * 0.15);
+            string[] vet = Console.ReadLine().Split(' ');
+            int code = int.Parse(vet[0]);
+            int amount = int.Parse(vet[1]);
+            double price = double.Parse(vet[2], CultureInfo.InvariantCulture);
 
-            Console.WriteLine("TOTAL = R$ " + total.ToString("F2", CultureInfo.InvariantCulture));
+            string[] vet1 = Console.ReadLine().Split(' ');
+            int code1 = int.Parse(vet1[0]);
+            int amount1 = int.Parse(vet1[1]);
+            double price1 = double.Parse(vet1[2], CultureInfo.InvariantCulture);
+
+            double payment = (amount * price) + (amount1 * price1);
+
+
+            Console.WriteLine("VALOR A PAGAR: R$ " + payment.ToString("F2", CultureInfo.InvariantCulture));
+
         }
     }
 }
