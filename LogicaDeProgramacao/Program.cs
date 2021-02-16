@@ -7,15 +7,14 @@ namespace LogicaDeProgramacao
     {
         static void Main(string[] args)
         {
-            int A = int.Parse(Console.ReadLine());
-            int B = int.Parse(Console.ReadLine());
-            int C = int.Parse(Console.ReadLine());
-            int D = int.Parse(Console.ReadLine());
+            int numEmp = int.Parse(Console.ReadLine());
+            int workedHours = int.Parse(Console.ReadLine());
+            double hourValue = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 
-            int DIFERENCA = (A * B - C * D);
+            double salary = workedHours * hourValue;
 
-            Console.WriteLine("DIFERENCA = " + DIFERENCA);
-            Console.ReadLine();
+            Console.WriteLine("NUMBER = " + numEmp);
+            Console.WriteLine("SALARY = U$ " + salary.ToString("F2", CultureInfo.InvariantCulture));
 
         }
     }
