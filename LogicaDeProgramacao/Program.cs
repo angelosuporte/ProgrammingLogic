@@ -8,21 +8,12 @@ namespace LogicaDeProgramacao
         static void Main(string[] args)
         {
 
-            string[] vet = Console.ReadLine().Split(' ');
-            int code = int.Parse(vet[0]);
-            int amount = int.Parse(vet[1]);
-            double price = double.Parse(vet[2], CultureInfo.InvariantCulture);
+            int X = int.Parse(Console.ReadLine());
+            double Y = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 
-            string[] vet1 = Console.ReadLine().Split(' ');
-            int code1 = int.Parse(vet1[0]);
-            int amount1 = int.Parse(vet1[1]);
-            double price1 = double.Parse(vet1[2], CultureInfo.InvariantCulture);
+            double kmTraveledPerLiter = X / Y;
 
-            double payment = (amount * price) + (amount1 * price1);
-
-
-            Console.WriteLine("VALOR A PAGAR: R$ " + payment.ToString("F2", CultureInfo.InvariantCulture));
-
+            Console.WriteLine(kmTraveledPerLiter.ToString("F3", CultureInfo.InvariantCulture) + " km/l");
         }
     }
 }
