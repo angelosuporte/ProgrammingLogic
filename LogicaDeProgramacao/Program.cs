@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 
 namespace LogicaDeProgramacao
 {
@@ -6,14 +7,15 @@ namespace LogicaDeProgramacao
     {
         static void Main(string[] args)
         {
-            
-            int km = int.Parse(Console.ReadLine());
-            
+            double consumptionFuel = 12.0;
+            int travelHours = int.Parse(Console.ReadLine());
+            int velocity = int.Parse(Console.ReadLine());
 
-            int tempo = km * 2;
+            int distance = travelHours * velocity;
+            double amountOfLiters = distance / consumptionFuel;
+            Console.WriteLine(amountOfLiters.ToString("F3", CultureInfo.InvariantCulture));
 
-            Console.WriteLine(tempo + " minutos");
-
+            Console.ReadLine();
         }
     }
 }
