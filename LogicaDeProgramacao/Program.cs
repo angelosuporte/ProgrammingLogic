@@ -7,18 +7,14 @@ namespace LogicaDeProgramacao
     {
         static void Main(string[] args)
         {
-            double b, height,area, perimeter, diagonal;
+            // Make a program that calculates and shows the volume of a sphere and the value of its radius(R) is given.
+            //The formula for calculating the volume is: (4 / 3) * pi * R³.Consider(assign) to pi the value 3.14159.
+          
+            double Pi = 3.14159;
+            double R = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            double Volume = (4 / 3.0) * Pi * Math.Pow(R, 3.0);
 
-            b = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-            height = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-
-            area = b * height;
-            perimeter = 2 * (b + height);
-            diagonal = Math.Sqrt(Math.Pow(b, 2.0) + Math.Pow(height, 2.0)); //teorema de Pitágoras
-
-            Console.WriteLine("AREA = " + area.ToString("F4", CultureInfo.InvariantCulture));
-            Console.WriteLine("PERIMETER = " + perimeter.ToString("F4", CultureInfo.InvariantCulture));
-            Console.WriteLine("DIAGONAL = " + diagonal.ToString("F4", CultureInfo.InvariantCulture));
+            Console.WriteLine("VOLUME = " + Volume.ToString("f3", CultureInfo.InvariantCulture));
 
             Console.ReadLine();
         }
