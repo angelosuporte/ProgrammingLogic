@@ -7,13 +7,18 @@ namespace LogicaDeProgramacao
     {
         static void Main(string[] args)
         {
-            double consumptionFuel = 12.0;
-            int travelHours = int.Parse(Console.ReadLine());
-            int velocity = int.Parse(Console.ReadLine());
+            double b, height,area, perimeter, diagonal;
 
-            int distance = travelHours * velocity;
-            double amountOfLiters = distance / consumptionFuel;
-            Console.WriteLine(amountOfLiters.ToString("F3", CultureInfo.InvariantCulture));
+            b = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            height = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+            area = b * height;
+            perimeter = 2 * (b + height);
+            diagonal = Math.Sqrt(Math.Pow(b, 2.0) + Math.Pow(height, 2.0)); //teorema de Pitágoras
+
+            Console.WriteLine("AREA = " + area.ToString("F4", CultureInfo.InvariantCulture));
+            Console.WriteLine("PERIMETER = " + perimeter.ToString("F4", CultureInfo.InvariantCulture));
+            Console.WriteLine("DIAGONAL = " + diagonal.ToString("F4", CultureInfo.InvariantCulture));
 
             Console.ReadLine();
         }
